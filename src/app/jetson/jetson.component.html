@@ -1,0 +1,62 @@
+<app-navbar>
+    <mat-tab-group backgroundColor="primary" dynamicHeight>
+
+        <mat-tab fxFlexFill label="Démo réalisée">
+
+            <div class="container mainHome" fxLayoutAlign="start start" fxLayout="column" fxFlex='100%'>
+
+                <div fxLayout="row" fxFlex='100%' fxLayoutAlign="start start" fxLayoutGap="1%">
+                    <mat-card fxLayout="row" fxFlex='70%' fxLayoutAlign="start start">
+                        <video fxFlex='100%' autoplay loop [muted]="true">
+                            <source src="../../assets/video/jetson.MOV" type="video/mp4">
+                        </video>
+
+                    </mat-card>
+
+
+
+
+                    <mat-card fxLayout="column" fxFlex='30%' fxLayoutAlign="center center">
+                        <h1>Matériel utilisé</h1>
+                        <mat-list role="list">
+                            <mat-list-item role="listitem">
+                                <mat-icon aria-hidden="false" aria-label="Example home icon">camera_enhance</mat-icon>
+                                Webcam
+                            </mat-list-item>
+                            <mat-list-item role="listitem">
+                                <mat-icon aria-hidden="false" aria-label="Example home icon">memory</mat-icon>
+                                Jetson Nano
+                            </mat-list-item>
+                            <mat-list-item role="listitem">
+                                <mat-icon aria-hidden="false" aria-label="Example home icon">sd_card</mat-icon>
+                                Carte micro SD
+                            </mat-list-item>
+                            <mat-list-item role="listitem">
+                                <mat-icon aria-hidden="false" aria-label="Example home icon">tv</mat-icon>
+                                Écran
+                            </mat-list-item>
+
+                        </mat-list>
+
+
+                    </mat-card>
+
+
+
+                </div>
+
+
+            </div>
+
+
+
+        </mat-tab>
+
+        <mat-tab label="Détails Jetson Nano">
+            an other tab
+        </mat-tab>
+        <mat-tab label="À propos">
+            à propos tab
+        </mat-tab>
+    </mat-tab-group>
+</app-navbar>

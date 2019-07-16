@@ -1,0 +1,22 @@
+<mat-drawer-container class="container" autosize>
+    <mat-drawer #drawer class="sidenav">
+        <button mat-button color="primary" routerLink="">Page d'accueil</button>
+        <button mat-button color="primary" routerLink="/home">Projet Emoji - Tensorflow Js</button>
+        <button mat-button color="primary" routerLink="/jetson">Projet Détection - Jetson Nano</button>
+    </mat-drawer>
+    <div class="mat-elevation-z3">
+        <mat-toolbar class="sidenav-content" color="primary">
+            <mat-toolbar-row>
+                <button mat-icon-button (click)="drawer.toggle()">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <span class="padding">Emoji Project</span>
+                <span class="spacer"></span>
+                <mat-icon style="padding-right: 20px">face</mat-icon>
+            </mat-toolbar-row>
+        </mat-toolbar>
+    </div>
+    <div class="toolbar-spacer">
+    </div>
+    <ng-content></ng-content>
+</mat-drawer-container>

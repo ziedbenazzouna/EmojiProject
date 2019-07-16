@@ -1,0 +1,24 @@
+.center-button {
+    position: absolute;
+    bottom: 0%;
+
+}
+.center-button .mat-raised-button {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.canvas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: scaleX(-1)
+}
+.padding {
+    width:267px;
+    height: 237px;
+    margin: 20px
+}
+.emoji-card {
+    margin: 20px
+}

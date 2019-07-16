@@ -1,0 +1,53 @@
+<h3 fxLayout="row" fxLayoutAlign="center center">Choisir le nombre de joueurs</h3>
+
+<div class="container" fxFlex='100%' fxLayout="row" fxLayoutAlign="center center">
+    <div fxFlex='15%' fxLayoutAlign="center">
+        <button *ngIf="!useStrokedPlayer1" (click)="togglePlayer1()" mat-stroked-button color='primary'>1
+            Joueur</button>
+        <button *ngIf="useStrokedPlayer1" (click)="togglePlayer1()" mat-raised-button color='primary'>1
+            Joueur
+        </button>
+    </div>
+    <div fxFlex='15%' fxLayoutAlign="center">
+        <button *ngIf="!useStrokedPlayer2" (click)="togglePlayer2()" mat-stroked-button color='primary'>2
+            Joueurs</button>
+        <button *ngIf="useStrokedPlayer2" (click)="togglePlayer2()" mat-raised-button color='primary'>2
+            Joueurs
+        </button>
+    </div>
+</div>
+
+<h3 fxLayoutAlign="center center">Choisir le nombre d'emojis</h3>
+
+<div class="container" fxFlex='100%' fxLayout="row" fxLayoutAlign="center center">
+    <div fxFlex='15%' fxLayoutAlign="center">
+        <button *ngIf="!useStrokedEmoji3" (click)="toggleEmoji3()" mat-stroked-button
+            color='primary'>3</button>
+        <button *ngIf="useStrokedEmoji3" (click)="toggleEmoji3()" mat-raised-button
+            color='primary'>3</button>
+    </div>
+    <div fxFlex='15%' fxLayoutAlign="center">
+        <button *ngIf="!useStrokedEmoji5" (click)="toggleEmoji5()" mat-stroked-button
+            color='primary'>5</button>
+        <button *ngIf="useStrokedEmoji5" (click)="toggleEmoji5()" mat-raised-button
+            color='primary'>5</button>
+    </div>
+    <div fxFlex='15%' fxLayoutAlign="center">
+        <button *ngIf="!useStrokedEmoji7" (click)="toggleEmoji7()" mat-stroked-button
+            color='primary'>7</button>
+        <button *ngIf="useStrokedEmoji7" (click)="toggleEmoji7()" mat-raised-button
+            color='primary'>7</button>
+    </div>
+    <div fxFlex='15%' fxLayoutAlign="center">
+        <button *ngIf="!useStrokedEmoji9" (click)="toggleEmoji9()" mat-stroked-button
+            color='primary'>9</button>
+        <button *ngIf="useStrokedEmoji9" (click)="toggleEmoji9()" mat-raised-button
+            color='primary'>9</button>
+    </div>
+</div>
+
+<div class="container" fxFlex='90%' fxLayout="row" fxLayoutAlign="center center">
+    <div fxFlex='40%' fxLayoutAlign="center">
+        <button color='primary' mat-raised-button (click)="openDialog()" >Commencer</button>
+    </div>
+</div>

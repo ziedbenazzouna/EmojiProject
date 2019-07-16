@@ -1,0 +1,195 @@
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+	width: 100%;
+    height: 100%;
+	color: #fff;
+	background: linear-gradient(-45deg, rgb(182, 5, 5), rgba(55, 7, 87, 0.788), rgba(19, 3, 109, 0.788), rgba(2, 99, 76, 0.801));
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+  transform-box: rotateY(45deg);
+}
+.text-container {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    height: 70%;
+}
+#arrowAnim {
+    position: relative;
+    left: 50%;
+    top: 4vw;
+    width: 0vw;
+    height: 0vw;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-90deg);
+    display: flex;
+  }
+  
+  .arrow {
+    width: 3vw;
+    height: 3vw;
+    border: 1px solid;
+    border-color: white transparent transparent white;
+    transform: rotate(-45deg);
+  }
+  
+  
+  .arrowSliding {
+    position: absolute;
+    -webkit-animation: slide 4s linear infinite; 
+            animation: slide 4s linear infinite;
+  }
+  
+  .delay1 {
+    -webkit-animation-delay: 1s; 
+      animation-delay: 1s;
+  }
+  .delay2 {
+    -webkit-animation-delay: 2s; 
+      animation-delay: 2s;
+  }
+  .delay3 {
+    -webkit-animation-delay: 3s; 
+      animation-delay: 3s;
+  }
+  .button
+{
+  letter-spacing: 2px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  float: inherit;
+  font-size: 24px;
+  font-family: "Open Sans";
+  font-weight: 300;
+  margin: 0 auto;
+  // margin: 5em auto;
+  display: block;
+  justify-content: center;
+  position: relative; 
+  padding: 20px 0;
+  width: 220px;
+
+  background: rgba(0, 221, 103, 0);
+  border: 1px solid rgb(255, 255, 255);
+  color: #FFF;
+  
+  transition: all 0.5s;
+}
+
+.button:hover, .button:active 
+{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  border-color: rgb(255, 255, 255);
+  background: rgba(128, 125, 125, 0);
+}
+
+.button .span 
+{
+  display: inline-flex;
+  position: relative;
+  padding-right: 0;
+  
+  transition: padding-right 0.5s;
+}
+
+.button .span:after 
+{
+  content: ' ';
+  position: absolute;
+  top: 0;
+  right: -18px;
+  opacity: 0;
+  width: 10px;
+  height: 10px;
+  margin-top: -10px;
+
+  background: rgba(255, 255, 255, 0);
+  border: 3px solid #FFF;
+  border-top: none;
+  border-right: none;
+
+  transition: opacity 0.5s, top 0.5s, right 0.5s;
+  transform: rotate(-45deg);
+}
+
+.button:hover .span, .button:active .span 
+{
+  padding-right: 30px;
+}
+
+.button:hover .span:after, .button:active .span:after 
+{
+  transition: opacity 0.5s, top 0.5s, right 0.5s;
+  opacity: 1;
+  border-color: rgb(255, 255, 255);
+  right: 0;
+  top: 50%;
+}
+  
+  @-webkit-keyframes slide {
+      0% { opacity:0; transform: translateX(6vw); }  
+     20% { opacity:1; transform: translateX(3vw); }   
+     80% { opacity:1; transform: translateX(-3vw); }  
+    100% { opacity:0; transform: translateX(-4vw); } 
+  }
+  @keyframes slide {
+      0% { opacity:0; transform: translateX(6vw); }  
+     20% { opacity:1; transform: translateX(3vw); }   
+     80% { opacity:1; transform: translateX(-3vw); }  
+    100% { opacity:0; transform: translateX(-4vw); } 
+  }
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+h1,
+h6 {
+	font-family: 'Open Sans';
+	font-weight: 300;
+	text-align: center;
+	position: relative;
+	// top: 30%;
+	// right: 0;
+	// left: 0;
+}

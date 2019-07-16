@@ -1,0 +1,29 @@
+<mat-card @fade class="emoji-card" >
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Vue de la webcam</mat-card-title>
+        <mat-card-subtitle>Mettez l'emoji ici</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-md-image src="assets/images/{{ currentEmojiNumber1 }}.png" alt="Emoji">
+    <!-- <canvas class="canvas" #canvasLeft width="140" height="140"></canvas> -->
+</mat-card>
+
+<canvas #canvas class="canvas" id="canvas" width="640" height="480" fxLayoutAlign="center"></canvas>
+<mat-card @fade class="emoji-card" *ngIf="player2Active">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Vue de la webcam</mat-card-title>
+        <mat-card-subtitle>Mettez l'emoji ici</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-md-image width="140" height="140" src="assets/images/{{ currentEmojiNumber2 }}.png" alt="Emoji">
+    <!-- <canvas class="canvas" #canvasRight width="140" height="140"></canvas> -->
+</mat-card>
+<div *ngIf="!player2Active" class="padding">
+
+</div>
+<div class="center-button">
+    <button mat-raised-button color="primary" *ngIf="!detectionActive"  (click)="detectionActive = true;" (click)="predictAnimationFunction()">Lancer la détection</button>
+    <button mat-raised-button disabled *ngIf="detectionActive">Lancer la détection</button>
+    <button mat-raised-button color="primary" *ngIf="detectionActive" (click)="detectionActive = false;" (click)="predictAnimationFunction()" >Arrêter la détection</button>
+    <button mat-raised-button disabled *ngIf="!detectionActive">Arrêter la détection</button>
+</div>

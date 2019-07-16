@@ -1,0 +1,43 @@
+<app-navbar>
+  <mat-tab-group backgroundColor="primary" dynamicHeight>
+
+    <video hidden #video id="video" width="640" height="480" autoplay></video>
+
+
+    <mat-tab label="Short tab">
+      <div class="container mainHome" fxLayoutAlign="center" fxLayout="column" fxFlex='100%'>
+
+        <div fxLayout="column" fxFlex='30%'>
+          <app-pre-game *ngIf="!inGame" (player2Event)="receivePlayer2Event($event)" fxFlex='100%' fxLayout="column"
+            fxLayoutGap=0.5%></app-pre-game>
+          <app-in-game *ngIf="inGame" (player2Event)="receivePlayer2Event($event)" fxFlex='100%' fxLayout="column"
+            fxLayoutGap=0.5%></app-in-game>
+        </div>
+
+        <div fxLayout="column" fxFlex='70%' fxLayoutAlign="center center">
+
+          <div fxLayout="row" style='width:100%' fxFlex='100%'>
+            <div fxFlex='auto' fxLayoutAlign="center center" fxLayout="row"></div>
+            <app-webcam fxflex width="640" height="480" fxLayoutAlign="center center" fxLayout="row"></app-webcam>
+            <div fxFlex='auto' fxLayout="row"></div>
+          </div>
+
+
+        </div>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Liste d'emojis">
+      <app-emoji-list></app-emoji-list>
+    </mat-tab>
+    <mat-tab label="À propos">
+      <h2 class="headline">Règles du jeu</h2>
+      <p> Le but du jeu est simple, réussir à reproduire tous les emojis à l'intérieur du carré de couleur en prenant le
+        moins de temps possible</p>
+      <h2>Basé sur l'intelligence artificielle</h2>
+      <p>Le but du projet est de pouvoir implémenté un modèle de détection du côté client avec TensorFlow, c'est à dire
+        d'avoir un modèle de Machine Learning qui utilise les ressources du client plutôt que les ressources d'un server
+      </p>
+    </mat-tab>
+  </mat-tab-group>
+</app-navbar>

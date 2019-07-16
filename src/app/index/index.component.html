@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300" type="text/css" />
+<div @fadeAnimation *ngIf="testingAnimations">
+    <div  class="background-container">
+        <div class="text-container">
+            <h1 @fadeInIndex1>Bienvenue</h1>
+            <h1 @fadeInIndex2>Chez Momentum Technologies</h1>
+            <h1 @fadeInIndex3>Pour un projet de recherche en intelligence artificielle</h1>
+            <br>
+            <h1 @fadeInIndex4>Commencer</h1>
+            <div @fadeInIndex4 id="arrowAnim">
+                <div class="arrowSliding">
+                    <div class="arrow"></div>
+                </div>
+                <div class="arrowSliding delay1">
+                    <div class="arrow"></div>
+                </div>
+                <div class="arrowSliding delay2">
+                    <div class="arrow"></div>
+                </div>
+                <div class="arrowSliding delay3">
+                    <div class="arrow"></div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <button @fadeInButton class="button" (click)="onClick()">
+                <span class="span">C'est parti!</span>
+            </button>
+        </div>
+    </div>
+</div>

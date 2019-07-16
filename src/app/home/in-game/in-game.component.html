@@ -1,0 +1,23 @@
+<h1 fxLayout="row" fxFlex="30%" fxLayoutAlign="center center">{{ convertMillisecondsToSeconds(counter) }}</h1>
+
+<div fxLayout="column" fxFlex="70%">
+
+    <div fxLayout="row" fxFlex="15%">
+        <mat-grid-list class="markerlist" cols="11" rowHeight="250px">
+            <mat-grid-tile class="markertile" *ngFor="let marker of markerList">
+                <h1 *ngIf="marker.display && marker.activePlayer1" style="color:red">&#8595;</h1>
+                <h1 *ngIf="marker.display && player2Active">&nbsp;</h1>
+                <h1 *ngIf="marker.display && player2Active && marker.activePlayer2" style="color:blue">&#8595;</h1>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+
+    <div fxLayout="row" fxFlex="85%">
+        <mat-grid-list class="emojilist" cols="11" rowHeight="400px">
+            <mat-grid-tile class="emojitile" *ngFor="let emoji of emojiList">
+                <img *ngIf="emoji.display" mat-card-md-image src="{{ emoji.path }}" alt="Picture of an emoji">
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+
+</div>
